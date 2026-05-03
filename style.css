@@ -1,129 +1,103 @@
-/* RESET */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-:root {
-    --clr-bg-dark: #1F2232;
-    --clr-accent-cyan: #00B5B5;
-    --clr-accent-red: #D74A3D;
-    --clr-text-light: #F0F0F0;
-    --clr-dark-contrast: #2E3147;
-
-    --shadow-light: 0 4px 12px rgba(0,0,0,0.3);
-}
-
 body {
-    font-family: Arial, sans-serif;
-    background: var(--clr-bg-dark);
-    color: var(--clr-text-light);
-    line-height: 1.5;
+  margin: 0;
+  font-family: Arial;
+  background: #1F2232;
+  color: white;
 }
 
-/* HEADER */
+/* NAVBAR */
 .header {
-    text-align: center;
-    padding: 14px;
-    border-bottom: 2px solid var(--clr-accent-red);
+  background: rgba(31,34,50,0.95);
+  border-bottom: 2px solid #D74A3D;
 }
 
-.header h2 {
-    font-size: clamp(1.2rem, 2vw, 1.8rem);
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 10px 15px;
+}
+
+/* LOGO */
+.nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.college-logo {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background: white;
+  padding: 3px;
+}
+
+/* LINKS */
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 15px;
+}
+
+.nav-links a {
+  color: #00B5B5;
+  text-decoration: none;
+}
+
+/* BUTTONS */
+.cta-group {
+  display: flex;
+  gap: 10px;
+}
+
+.cta-button {
+  padding: 8px 14px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.lost-btn {
+  background: #D74A3D;
+  color: white;
+}
+
+.found-btn {
+  background: #00B5B5;
+  color: #1F2232;
 }
 
 /* HERO */
 .hero {
-    text-align: center;
-    padding: 30px 15px;
+  text-align: center;
+  padding: 80px 20px;
 }
 
-.hero h1 {
-    font-size: clamp(1.5rem, 4vw, 2.5rem);
-    color: var(--clr-accent-cyan);
+/* CARDS */
+.activity {
+  padding: 20px;
 }
 
-.hero p {
-    font-size: clamp(0.9rem, 2.5vw, 1.2rem);
-    opacity: 0.8;
-}
-
-/* SECTION */
-.activity-section {
-    padding: 15px;
-}
-
-.activity-section h2 {
-    text-align: center;
-    margin-bottom: 20px;
-    font-size: clamp(1.3rem, 3vw, 2rem);
-}
-
-/* GRID (AUTO RESPONSIVE) */
-.cards-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 15px;
-}
-
-/* CARD */
 .card {
-    background: var(--clr-dark-contrast);
-    padding: 12px;
-    border-radius: 12px;
-    border-left: 4px solid var(--clr-accent-red);
-    box-shadow: var(--shadow-light);
+  background: #2E3147;
+  margin: 15px 0;
+  padding: 15px;
+  border-radius: 10px;
+}
 
-    display: flex;
+.card img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+  .nav {
     flex-direction: column;
-    gap: 8px;
-}
-
-/* IMAGE */
-.card-image {
-    width: 100%;
-    border-radius: 10px;
-    overflow: hidden;
-    background: #000;
-}
-
-.card-image img {
-    width: 100%;
-    height: auto;
-    object-fit: contain;
-    max-height: 220px;
-}
-
-/* TEXT */
-.card h3 {
-    font-size: clamp(1rem, 2.5vw, 1.2rem);
-}
-
-.card p {
-    font-size: clamp(0.85rem, 2.2vw, 1rem);
-    opacity: 0.85;
-}
-
-/* TAG */
-.dummy-tag {
-    font-size: 10px;
-    background: var(--clr-accent-red);
-    padding: 3px 6px;
-    border-radius: 5px;
-    width: fit-content;
-}
-
-/* HOVER only on desktop */
-@media (hover: hover) {
-    .card:hover {
-        transform: translateY(-5px);
-    }
-}
-
-/* EXTRA SMALL DEVICES */
-@media (max-width: 350px) {
-    .card-image img {
-        max-height: 180px;
-    }
+    gap: 10px;
+  }
 }
