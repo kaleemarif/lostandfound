@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Report Lost Item</title>
+
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header class="header">
+  <h2>Report Lost Item</h2>
+</header>
+
+<main class="form-page">
+  <section class="form-section">
+
+    <form id="lostForm" class="report-form">
+
+      <input type="text" id="item-name" placeholder="Item Name" required>
+
+      <select id="last-seen" required>
+        <option value="">Last Seen Location</option>
+        <option>Library</option>
+        <option>Canteen</option>
+        <option>Block A</option>
+        <option>Parking</option>
+      </select>
+
+      <textarea id="description" placeholder="Description" required></textarea>
+
+      <input type="date" id="date-lost" required>
+
+      <input type="file" id="item-photo">
+
+      <input type="text" placeholder="Your Name" required>
+
+      <input type="text" placeholder="Contact Info" required>
+
+      <button type="submit" class="submit-button">Submit Lost Report</button>
+
+    </form>
+
+  </section>
+</main>
+
+<script src="js/script.js"></script>
+</body>
+</html>
