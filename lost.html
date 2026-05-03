@@ -3,49 +3,33 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Report Lost Item</title>
+<title>Report Lost</title>
 
-<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
 <header class="header">
-  <h2>Report Lost Item</h2>
+  <nav class="nav">
+    <h2>Report Lost Item</h2>
+  </nav>
 </header>
 
-<main class="form-page">
-  <section class="form-section">
+<section class="form-section">
 
-    <form id="lostForm" class="report-form">
+<form class="form">
 
-      <input type="text" id="item-name" placeholder="Item Name" required>
+<input type="text" placeholder="Item Name" required>
+<input type="text" placeholder="Location" required>
+<textarea placeholder="Description"></textarea>
+<input type="file">
 
-      <select id="last-seen" required>
-        <option value="">Last Seen Location</option>
-        <option>Library</option>
-        <option>Canteen</option>
-        <option>Block A</option>
-        <option>Parking</option>
-      </select>
+<button type="submit">Submit</button>
 
-      <textarea id="description" placeholder="Description" required></textarea>
+</form>
 
-      <input type="date" id="date-lost" required>
+</section>
 
-      <input type="file" id="item-photo">
-
-      <input type="text" placeholder="Your Name" required>
-
-      <input type="text" placeholder="Contact Info" required>
-
-      <button type="submit" class="submit-button">Submit Lost Report</button>
-
-    </form>
-
-  </section>
-</main>
-
-<script src="js/script.js"></script>
 </body>
 </html>
