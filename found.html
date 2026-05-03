@@ -3,49 +3,33 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Report Found Item</title>
+<title>Report Found</title>
 
-<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
 <header class="header">
-  <h2>Report Found Item</h2>
+  <nav class="nav">
+    <h2>Report Found Item</h2>
+  </nav>
 </header>
 
-<main class="form-page">
-  <section class="form-section">
+<section class="form-section">
 
-    <form id="foundForm" class="report-form">
+<form class="form">
 
-      <input type="text" id="item-name-found" placeholder="Item Name" required>
+<input type="text" placeholder="Item Name" required>
+<input type="text" placeholder="Found Location" required>
+<textarea placeholder="Description"></textarea>
+<input type="file">
 
-      <select id="found-location" required>
-        <option value="">Found Location</option>
-        <option>Library</option>
-        <option>Canteen</option>
-        <option>Block A</option>
-        <option>Parking</option>
-      </select>
+<button type="submit">Submit</button>
 
-      <textarea id="description-found" placeholder="Description" required></textarea>
+</form>
 
-      <input type="date" id="date-found" required>
+</section>
 
-      <input type="file" id="item-photo-found">
-
-      <input type="text" placeholder="Your Name" required>
-
-      <input type="text" placeholder="Contact Info" required>
-
-      <button type="submit" class="submit-button">Submit Found Report</button>
-
-    </form>
-
-  </section>
-</main>
-
-<script src="js/script.js"></script>
 </body>
 </html>
