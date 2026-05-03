@@ -1,45 +1,26 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-  const lostForm = document.getElementById("lostForm");
+    console.log("App Loaded ✅");
 
-  if (lostForm) {
-    lostForm.addEventListener("submit", (e) => {
-      e.preventDefault();
+    // Future: dynamic posts yaha add honge
+    const container = document.getElementById("posts-container");
 
-      const data = {
-        type: "lost",
-        name: document.getElementById("item-name").value,
-        description: document.getElementById("description").value,
-        location: document.getElementById("last-seen").value,
-        date: document.getElementById("date-lost").value
-      };
+    // Example future function
+    function addPost(title, location, desc, image) {
+        const card = document.createElement("div");
+        card.className = "card";
 
-      console.log("Lost:", data);
-      alert("Lost report saved (database coming next)");
+        card.innerHTML = `
+            <div class="card-image">
+                <img src="${image}">
+            </div>
+            <h3>${title}</h3>
+            <p>${location}</p>
+            <p>${desc}</p>
+        `;
 
-      lostForm.reset();
-    });
-  }
+        container.prepend(card);
+    }
 
-  const foundForm = document.getElementById("foundForm");
-
-  if (foundForm) {
-    foundForm.addEventListener("submit", (e) => {
-      e.preventDefault();
-
-      const data = {
-        type: "found",
-        name: document.getElementById("item-name-found").value,
-        description: document.getElementById("description-found").value,
-        location: document.getElementById("found-location").value,
-        date: document.getElementById("date-found").value
-      };
-
-      console.log("Found:", data);
-      alert("Found report saved (database coming next)");
-
-      foundForm.reset();
-    });
-  }
-
+    // (future use)
 });
