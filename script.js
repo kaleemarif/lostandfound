@@ -2,17 +2,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
     console.log("App Loaded ✅");
 
-    // Future: dynamic posts yaha add honge
     const container = document.getElementById("posts-container");
 
-    // Example future function
+    // Future ready function
     function addPost(title, location, desc, image) {
         const card = document.createElement("div");
         card.className = "card";
 
         card.innerHTML = `
             <div class="card-image">
-                <img src="${image}">
+                <img src="${image}" alt="item">
             </div>
             <h3>${title}</h3>
             <p>${location}</p>
@@ -22,5 +21,5 @@ document.addEventListener("DOMContentLoaded", () => {
         container.prepend(card);
     }
 
-    // (future use)
+    // future use
 });
