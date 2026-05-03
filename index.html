@@ -5,52 +5,68 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>GG Lost & Found Hub</title>
 
-<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
 <header class="header">
-  <h2>GG Lost & Found Hub</h2>
+    <h2>GG Lost & Found Hub</h2>
 </header>
 
 <section class="hero">
-  <h1>Lost & Found Hub</h1>
-  <p>Find your lost items or help others</p>
-
-  <div class="hero-buttons">
-    <a href="lost.html" class="btn lost">Report Lost</a>
-    <a href="found.html" class="btn found">Report Found</a>
-  </div>
+    <h1>Lost & Found</h1>
+    <p>Find your lost items or help others</p>
 </section>
 
 <section class="activity-section">
-  <h2>Recent Activity</h2>
-  <p class="demo-note">⚠️ Demo posts (not real data)</p>
+<h2>Recent Activity</h2>
 
-  <div class="cards-grid">
+<div class="cards-grid" id="posts-container">
 
-    <div class="card">
-      <h3>📱 Lost: Mobile Phone</h3>
-      <p>Last seen in Library. Black Realme phone.</p>
-      <img src="images/dumyimage1.jpg" class="card-img">
+<!-- Dummy Post 1 -->
+<div class="card">
+    <span class="dummy-tag">Example</span>
+    
+    <div class="card-image">
+        <img src="dumyimage1.jpg">
     </div>
 
-    <div class="card">
-      <h3>📐 Lost: Mini Drafter</h3>
-      <p>Block A Room 204. Engineering tool.</p>
-      <img src="images/dumyimage2.jpg" class="card-img">
+    <h3>Lost: Mobile Phone</h3>
+    <p>Last seen: Library</p>
+    <p>Black Samsung phone</p>
+</div>
+
+<!-- Dummy Post 2 -->
+<div class="card">
+    <span class="dummy-tag">Example</span>
+
+    <div class="card-image">
+        <img src="dumyimage2.jpg">
     </div>
 
-    <div class="card">
-      <h3>🔑 Found: Bike Key</h3>
-      <p>Found near parking area.</p>
-      <img src="images/dumyimage3.jpg" class="card-img">
+    <h3>Found: Mini Drafter</h3>
+    <p>Found at: Block A</p>
+    <p>Engineering tool</p>
+</div>
+
+<!-- Dummy Post 3 -->
+<div class="card">
+    <span class="dummy-tag">Example</span>
+
+    <div class="card-image">
+        <img src="dumyimage3.jpg">
     </div>
 
-  </div>
+    <h3>Found: Bike Keys</h3>
+    <p>Found at: Parking</p>
+    <p>Red keychain</p>
+</div>
+
+</div>
 </section>
 
-<script src="js/script.js"></script>
+<script src="script.js"></script>
+
 </body>
 </html>
