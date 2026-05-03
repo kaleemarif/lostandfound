@@ -13,59 +13,78 @@
     --clr-dark-contrast: #2E3147;
 
     --shadow-light: 0 4px 12px rgba(0,0,0,0.3);
-    --shadow-accent: 0 4px 15px rgba(0,181,181,0.4);
 }
 
 body {
     font-family: Arial, sans-serif;
     background: var(--clr-bg-dark);
     color: var(--clr-text-light);
+    line-height: 1.5;
 }
 
 /* HEADER */
 .header {
-    background: #1F2232;
-    padding: 15px;
     text-align: center;
+    padding: 14px;
     border-bottom: 2px solid var(--clr-accent-red);
+}
+
+.header h2 {
+    font-size: clamp(1.2rem, 2vw, 1.8rem);
 }
 
 /* HERO */
 .hero {
     text-align: center;
-    padding: 40px 20px;
+    padding: 30px 15px;
+}
+
+.hero h1 {
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    color: var(--clr-accent-cyan);
+}
+
+.hero p {
+    font-size: clamp(0.9rem, 2.5vw, 1.2rem);
+    opacity: 0.8;
 }
 
 /* SECTION */
 .activity-section {
-    padding: 20px;
+    padding: 15px;
 }
 
-/* GRID */
+.activity-section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: clamp(1.3rem, 3vw, 2rem);
+}
+
+/* GRID (AUTO RESPONSIVE) */
 .cards-grid {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 15px;
 }
 
 /* CARD */
 .card {
     background: var(--clr-dark-contrast);
-    padding: 1rem;
+    padding: 12px;
     border-radius: 12px;
-    border-left: 5px solid var(--clr-accent-red);
+    border-left: 4px solid var(--clr-accent-red);
     box-shadow: var(--shadow-light);
 
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 8px;
 }
 
 /* IMAGE */
 .card-image {
     width: 100%;
-    overflow: hidden;
     border-radius: 10px;
+    overflow: hidden;
     background: #000;
 }
 
@@ -73,27 +92,38 @@ body {
     width: 100%;
     height: auto;
     object-fit: contain;
-    max-height: 250px;
+    max-height: 220px;
+}
+
+/* TEXT */
+.card h3 {
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
+}
+
+.card p {
+    font-size: clamp(0.85rem, 2.2vw, 1rem);
+    opacity: 0.85;
 }
 
 /* TAG */
 .dummy-tag {
-    font-size: 12px;
+    font-size: 10px;
     background: var(--clr-accent-red);
-    padding: 3px 8px;
-    border-radius: 6px;
+    padding: 3px 6px;
+    border-radius: 5px;
     width: fit-content;
 }
 
-/* RESPONSIVE */
-@media (min-width: 600px) {
-    .cards-grid {
-        grid-template-columns: repeat(2, 1fr);
+/* HOVER only on desktop */
+@media (hover: hover) {
+    .card:hover {
+        transform: translateY(-5px);
     }
 }
 
-@media (min-width: 1024px) {
-    .cards-grid {
-        grid-template-columns: repeat(3, 1fr);
+/* EXTRA SMALL DEVICES */
+@media (max-width: 350px) {
+    .card-image img {
+        max-height: 180px;
     }
 }
